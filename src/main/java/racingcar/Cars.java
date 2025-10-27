@@ -8,8 +8,7 @@ public class Cars {
     private final List<Car> carList;
 
     public Cars(String carNames) {
-        ArrayList<Car> cars = CarNamesParse.parse(carNames);
-        carList = cars;
+        carList = CarNamesParse.parse(carNames);
     }
 
     public String raceOnce() {
