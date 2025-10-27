@@ -19,7 +19,7 @@ public class CarNamesParse {
 
     private static ArrayList<String> splitCarNames(String carNames) {
         carNames = carNames.replaceAll(" ", "");
-        String[] cars = carNames.split(",");
+        String[] cars = carNames.split(",", -1);
         return new ArrayList<>(Arrays.asList(cars));
     }
 
@@ -32,6 +32,10 @@ public class CarNamesParse {
     private static void checkCarNames(String carName) {
         if (carName.length() > 5) {
             throw new IllegalArgumentException("자동차 이름이 5글자를 초과합니다.");
+        }
+
+        if (carName.isEmpty()) {
+            throw new IllegalArgumentException("자동차 이름이 입력되지 않았습니다.");
         }
     }
 }
