@@ -10,4 +10,21 @@ public class Car {
         this.carName = carName;
         moveCount = 0;
     }
+
+    public void move() {
+        int check = Randoms.pickNumberInRange(0, 9);
+        if (check >= 4) {
+            moveCount++;
+        }
+    }
+
+    public String makeComment() {
+        String comment = carName + " : ";
+
+        for (int i = 0; i < moveCount; i++) {
+            comment = comment.concat("-");
+        }
+
+        return comment.concat("\n");
+    }
 }

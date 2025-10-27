@@ -10,4 +10,16 @@ public class Cars {
         ArrayList<Car> cars = CarNamesParse.parse(carNames);
         carList = cars;
     }
+
+    public String raceOnce() {
+        String returnComment = "";
+
+        for (Car car : carList) {
+            car.move();
+            String comment = car.makeComment();
+            returnComment = returnComment.concat(comment);
+        }
+
+        return returnComment;
+    }
 }
