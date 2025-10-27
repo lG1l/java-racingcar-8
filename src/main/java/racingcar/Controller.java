@@ -4,7 +4,10 @@ import java.util.List;
 
 public class Controller {
     public void run() {
+        Cars cars = new Cars(IOConsole.inputCars());
 
+        int count = IOConsole.inputCount();
+        checkCount(count);
     }
 
     private void checkCount(int count) {
