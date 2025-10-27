@@ -27,4 +27,12 @@ public class Car {
 
         return comment.concat("\n");
     }
+
+    public int getMoveCount() {
+        return moveCount;
+    }
+
+    public String getCarName() {
+        return carName;
+    }
 }
