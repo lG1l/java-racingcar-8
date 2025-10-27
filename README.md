@@ -112,6 +112,8 @@
     * `printWinner메소드`
     * `makeComment메소드`: 우승자 이름 목록을 쉼표로 연결하여 **출력용 문자열을 생성**하여 반환한다.
 
+* **예외처리 Test 관련 로직**: `CarNamesParseTest`, `ControllerTest` 
+
 ---
 
 ## 테스트 실행 가이드
