@@ -2,6 +2,8 @@ package racingcar;
 
 import camp.nextstep.edu.missionutils.Console;
 
+import java.util.List;
+
 public class IOConsole {
     public static String inputCars() {
         System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
@@ -18,5 +20,21 @@ public class IOConsole {
 
     public static void roundResultPrint(String comment) {
         System.out.println(comment);
+    }
+
+    public static void printWinner(List<String> winners) {
+        String comment = makeComment(winners);
+        System.out.print("최종 우승자 : " + comment);
+    }
+
+    private static String makeComment(List<String> winners) {
+        String comment = "";
+        for (String winner : winners) {
+            String plusWinner = winner + ", ";
+            comment = comment.concat(plusWinner);
+        }
+
+        int endIndex = comment.length() - 2;
+        return comment.substring(0, endIndex);
     }
 }
