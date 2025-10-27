@@ -23,8 +23,8 @@ public class CarNamesParse {
         return new ArrayList<>(Arrays.asList(cars));
     }
 
-    private static void isEmpty(ArrayList<String> cars){
-        if(cars.isEmpty()){
+    private static void isEmpty(ArrayList<String> cars) {
+        if (cars.isEmpty()) {
             throw new IllegalArgumentException("자동차 이름이 입력되지 않았습니다.");
         }
     }
