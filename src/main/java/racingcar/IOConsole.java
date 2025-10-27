@@ -15,4 +15,8 @@ public class IOConsole {
 
         return Integer.parseInt(countString);
     }
+
+    public static void roundResultPrint(String comment) {
+        System.out.println(comment);
+    }
 }
