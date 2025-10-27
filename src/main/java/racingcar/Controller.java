@@ -15,7 +15,7 @@ public class Controller {
         IOConsole.printWinner(winner);
     }
 
-    private void checkCount(int count) {
+    void checkCount(int count) {
         if (count < 0) {
             throw new IllegalArgumentException("수행횟수가 음수입니다.");
         }
