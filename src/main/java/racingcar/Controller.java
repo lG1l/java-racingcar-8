@@ -10,6 +10,9 @@ public class Controller {
         checkCount(count);
 
         countMove(cars, count);
+
+        List<String> winner = cars.findWinner();
+        IOConsole.printWinner(winner);
     }
 
     private void checkCount(int count) {
